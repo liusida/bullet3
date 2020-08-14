@@ -1,0 +1,19 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "shell",
+			"label": "install",
+			// sudo apt install ccache
+			// ccache can make this task faster
+			"command": "source activate debug_pybullet;export CC=\"ccache gcc\";pip install -e .",
+			"options": {
+				"cwd": "${workspaceFolder}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": "build"
+		}
+	]
+}
