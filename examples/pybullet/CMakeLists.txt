@@ -90,5 +90,10 @@ ELSE()
   SET(PYTHON_SITE_PACKAGES lib/python${PYTHON_VERSION_MAJOR}.${PYTHON_VERSION_MINOR}/site-packages CACHE PATH "Python install path")
 ENDIF()
 
+# Sida:
+MESSAGE("Intent to install pybullet into " ${PYTHON_SITE_PACKAGES})
+set(PYTHON_SITE_PACKAGES /home/liusida/anaconda3/envs/debug_pybullet/lib/python3.6/site-packages)
+MESSAGE("Reset path to " ${PYTHON_SITE_PACKAGES})
+# Sida.
 INSTALL(TARGETS pybullet DESTINATION ${PYTHON_SITE_PACKAGES})
 
