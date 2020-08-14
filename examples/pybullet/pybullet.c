@@ -9393,6 +9393,7 @@ static PyObject* pybullet_createMultiBody(PyObject* self, PyObject* args, PyObje
 
 			for (i = 0; i < numLinkMasses; i++)
 			{
+				printf("[Debug] i = %d, numLinkMasses = %d\n",i,numLinkMasses);
 				double linkMass = pybullet_internalGetFloatFromSequence(seqLinkMasses, i);
 				int linkCollisionShapeIndex = pybullet_internalGetIntFromSequence(seqLinkCollisionShapes, i);
 				int linkVisualShapeIndex = pybullet_internalGetIntFromSequence(seqLinkVisualShapes, i);
