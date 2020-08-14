@@ -140,7 +140,11 @@ else()
       unset(_PYTHON_EXECUTABLE CACHE)
       find_program(_PYTHON_EXECUTABLE ${_CURRENT_PYTHON_NAME}
         PATHS [HKEY_LOCAL_MACHINE\\SOFTWARE\\Python\\PythonCore\\${_CURRENT_VERSION}\\InstallPath])
-
+      # Sida:
+      MESSAGE("Found Python here: " ${_PYTHON_EXECUTABLE})
+      set(_PYTHON_EXECUTABLE /home/liusida/anaconda3/envs/debug_pybullet/bin/python)
+      MESSAGE("Reset it to: " ${_PYTHON_EXECUTABLE})
+      # Sida.
       if(_PYTHON_EXECUTABLE)
 
         EXECUTE_PROCESS(
