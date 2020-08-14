@@ -1,4 +1,13 @@
 cmake_minimum_required(VERSION 2.4.3)
+
+# Sida:
+# -DBUILD_PYBULLET=ON -DBUILD_PYBULLET_NUMPY=ON -DUSE_DOUBLE_PRECISION=ON -DBT_USE_EGL=ON
+set(BUILD_PYBULLET ON)
+set(BUILD_PYBULLET_NUMPY ON)
+SET(USE_DOUBLE_PRECISION ON)
+SET(BT_USE_EGL ON)
+# end Sida.
+
 set(CMAKE_ALLOW_LOOSE_LOOP_CONSTRUCTS true)
 cmake_policy(SET CMP0017 NEW)
 #this line has to appear before 'PROJECT' in order to be able to disable incremental linking
